@@ -1,38 +1,62 @@
-.App {
-  text-align: center;
+/* Global */
+
+p {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.Character-Board {
+  background: #e9e9e9;
+  max-width: 665px;
+  margin: 20px auto 40px;
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Character-Board-Wrap {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.Character-Board-Wrap .character-card {
+/* 112 x 163 */
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.Character-Board-Wrap .character-card {  
+  overflow: hidden;
+  border-radius: 3px;
+  max-width: 112px;
+  width: 100%;
+  margin: 0 auto 20px auto;
+  background: #ffffff;
+  box-shadow: 2px 3px 0px 1px #cecece, -2px 3px 4px 4px #eaeaea;
+  cursor: pointer;
+}
+.Character-Board-Wrap .character-card:hover {  
+  transform: scale(1.06);
+}
+
+.Character-Board-Wrap .character-card img{
+  width: 100%;
+  height: auto;
+}
+
+
+.Character-Board-Wrap .character-card .text{
+  padding: 0 5px;
+  margin-bottom: 5px;
+}
+
+.Character-Board-Wrap .character-card .text p {
+  font-size: 12px;
+}
+
+
+@media screen and (max-width: 1024px){
+  .Character-Board-Wrap .character-card {
+    max-width: 240px;
   }
 }
